@@ -71,6 +71,15 @@
 	//$k >= 0 && $k <= 100; echo '<br />'; // Vraca vrednost Polozio - nejasno
 	//var_dump($k); - nejasno
 	
+	
+		echo 'brm brm';
+echo '<br />';
+$numbers = array(0.001, 0.002, 0.003, 0.004, 0.005, 0.006, 0.007, 0.008, 0.009);
+foreach ($numbers as $number)
+    print $number."->".number_format($number, 2, '.', ',')."<br>";
+
+	
+	echo '<br />';
 	$out = `dir c:`;
 	echo '<pre>'.$out.'</pre>';
 	
@@ -95,7 +104,7 @@ $foo = NULL;
 var_dump(isset($foo));   // FALSE
 
 
-
+$tireqty = 3;
 if ($tireqty < 10) {
 	$discount = 0;
 }	elseif ($tireqty>=10 && $tireqty <= 49) {

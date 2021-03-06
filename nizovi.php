@@ -6,7 +6,7 @@ $slova = range ('a', 'z');
 echo $products[0];echo $products[1];echo $products[2];
 // promena varijable unutar niza, nakon ovoga products 0 ima vrednost Fuses
 $products[0] = 'Fuses';
-//Ukoliko zelimo dodati u niz novuvrednost, dodajemo numericki index
+//Ukoliko zelimo dodati u niz novu vrednost, dodajemo numericki index
 $products[3] = 'Fuses'; echo '<br />';
 // Ovo ce iscitati sledece - FusesOilSpark PlugsFuses	
 echo $products[0];echo $products[1];echo $products[2];echo $products[3];
@@ -18,11 +18,11 @@ $products[2] = 'Spark Plugs';
 for ($i = 0; $i < 3; $i++) {
 	echo $products[$i]." ";
 }
-// Upotreba foreach petlje za pristupanje elementima, priostupa svim elementima u nizu
+// Upotreba foreach petlje za pristupanje elementima, pristupa svim elementima u nizu
 foreach ($products as $current) {
 	echo $current." ";
 }
-//sledeci kod pravi noz u kome su imena artikala kljucevi, a cene su vrednosti
+//sledeci kod pravi niz u kome su imena artikala kljucevi, a cene su vrednosti
 $prices = array('Tires'=>100, 'Oil'=>10, 'Spark Plugs'=>4);
 // sledeci kod pravi isti niz prices. Umesto niza sa 3 elementa, prvo se pravi niz sa samo jednim elementom, a zatim mu se dodaju jos dva
 $prices = array('Tires' => 100);
@@ -56,3 +56,6 @@ reset($prices); // ukoliko ne stavimo reset funkciju, browser nece iscitati nist
 while(list($product, $price) = each($prices)) {
 	echo "$product - $price<br />";
 }
+
+
+// dvodimenzioni niz

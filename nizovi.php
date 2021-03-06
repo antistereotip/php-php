@@ -37,3 +37,15 @@ echo '<br />';
 foreach($prices as $key => $value) {
 	echo $key.'=>'.$value.'<br/>';
 }
+//while petlja pomocu funkcije each
+while ($element = each ($prices)) {
+	echo $element ['key'];
+	echo " - ";
+	echo $element ['value'];
+	echo "<br />";
+}
+// istu stvar kao u prethodnom delu koda, mozemo uraditi i sa while petljom na ovaj nacin
+reset($prices);
+while(list($product, $price) = each($prices)) {
+	echo "$product - $price<br />";
+}

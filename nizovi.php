@@ -49,3 +49,10 @@ reset($prices);
 while(list($product, $price) = each($prices)) {
 	echo "$product - $price<br />";
 }
+
+echo 'brm brm <br />';
+// reset vraca pokazivac na pocetak niza, pa omogucava da ponovo predjemo sve elemente niza
+reset($prices); // ukoliko ne stavimo reset funkciju, browser nece iscitati nista, jer reset vraca niz na pocetak
+while(list($product, $price) = each($prices)) {
+	echo "$product - $price<br />";
+}

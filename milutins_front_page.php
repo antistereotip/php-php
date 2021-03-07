@@ -1,7 +1,7 @@
 <?php
-$pictures = array ('tire.png', 'oil.png', 'spark_plug.png', 
-					'door.png', 'steering-wheel.png', 'thermostat.png',
-					'wiper_blade.png', 'gasket.png', 'brake_pad.png');
+$pictures = array ('pictures/tire.png', 'pictures/oil.png', 'pictures/spark_plug.png', 
+					'pictures/door.png', 'pictures/steering-wheel.png', 'pictures/thermostat.png',
+					'pictures/wiper_blade.png', 'pictures/gasket.png', 'pictures/brake_pad.png');
 					
 shuffle($pictures);
 ?>

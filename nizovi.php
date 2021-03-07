@@ -157,5 +157,21 @@ $categories = array (array (array ('CAR_TIR', 'Tires', 100),
 		 echo '<br />';
 	 }
  }
-							
-							
+echo '<br />';			
+// sortiranje nizova
+
+$products = array('Tires', 'Oil', 'Spark Plugs');
+// sortiraj po abecednom redu
+sort ($products);
+print_r($products);
+echo '<br />';
+$prices = array(100, 10, 4);
+// sortiraj po numerickom redu
+sort($prices);
+print_r($prices);
+echo '<br />';
+
+$prices = array('Tires'=>100, 'Oil'=>10, 'Spark Plugs'=>4);
+//sortira prema rastucem redosledu cena
+asort($prices);
+print_r($prices);

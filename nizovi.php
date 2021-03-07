@@ -135,15 +135,16 @@ $categories = array (array (array ('CAR_TIR', 'Tires', 100),
 							array ('CAR_OIL', 'Oil', 10),
 							array ('CAR_SPK', 'Spark Plugs', 4)
 							),
-				     array (array ('VAN_TIR', 'Tires', 120),
+				    array (array ('VAN_TIR', 'Tires', 120),
 							array ('VAN_OIL', 'Oil', 12),
 							array ('VAN_SPK', 'Spark Plugs', 5)
 							),
-				     array (array ('TRK_TIR', 'Tires', 150),
+				    array (array ('TRK_TIR', 'Tires', 150),
 							array ('TRK_OIL', 'Oil', 15),
 							array ('TRK_SPK', 'Spark Plugs', 6)
 							)
-					);
+			);
+// isprintuj varijablu categories
  print_r ($categories);
 							
 							

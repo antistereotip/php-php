@@ -120,3 +120,30 @@ $products = array(array('Code' => 'TIR',
 for ( $row = 0; $row <3; $row ++) {
 	echo '|'.$products[$row]['Code'].'|'.$products[$row]['Description'].'|'.$products[$row]['Price'].'|<br />';
 }
+
+
+// each i list omogucavaju prolazak kroz unutrasnje nizove, zbog cega je unutar for potrebna while petlja
+for ( $row = 0; $row <3; $row ++) {
+	while (list($key, $value) = each ($products[$row])) {
+			echo "|$value";
+	}
+	echo '<br/>';
+}
+
+// U kodu ispod imamo primer trodimenzionog niza koji sadrzi nizove nizova
+$categories = array (array (array ('CAR_TIR', 'Tires', 100),
+							array ('CAR_OIL', 'Oil', 10),
+							array ('CAR_SPK', 'Spark Plugs', 4)
+							),
+				     array (array ('VAN_TIR', 'Tires', 120),
+							array ('VAN_OIL', 'Oil', 12),
+							array ('VAN_SPK', 'Spark Plugs', 5)
+							),
+				     array (array ('TRK_TIR', 'Tires', 150),
+							array ('TRK_OIL', 'Oil', 15),
+							array ('TRK_SPK', 'Spark Plugs', 6)
+							)
+					);
+ print_r ($categories);
+							
+							

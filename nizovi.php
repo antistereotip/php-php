@@ -180,3 +180,25 @@ echo '<br />';
 ksort($prices);
 print_r($prices);
 //Postoje funkcije rsort, arsort i krsort koje sortiraju niz opadajucim redosledom
+
+//sortiranje visedimenzionih nizova
+// dvodimenzioni niz
+$products = array( array('TIR', 'Tires', 100),
+				   array('OIL', 'Oil', 10),
+				   array ('SPK', 'Spark Plugs', 4));
+				 
+function compare($x, $y) {
+	if ($x[1] == $y[1]) {
+		return 0;
+	} else if ($x[1]<$y[1]) {
+		return -1;
+	} else {
+		return 1;
+	}
+}
+
+usort ($products, 'compare');
+
+echo compare('TIR', 'OIL' );
+echo compare('OIL', 'SPK' );
+echo compare('SPK', 'TIR' );

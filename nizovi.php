@@ -175,3 +175,8 @@ $prices = array('Tires'=>100, 'Oil'=>10, 'Spark Plugs'=>4);
 //sortira prema rastucem redosledu cena
 asort($prices);
 print_r($prices);
+echo '<br />';
+//funkcija ksort redja kljuceve po abecedi
+ksort($prices);
+print_r($prices);
+//Postoje funkcije rsort, arsort i krsort koje sortiraju niz opadajucim redosledom

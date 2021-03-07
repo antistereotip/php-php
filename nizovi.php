@@ -83,3 +83,40 @@ while(list($product, $price) = each($prices)) {
 
 
 // dvodimenzioni niz
+$products = array( array('TIR', 'Tires', 100),
+				   array('OIL', 'Oil', 10),
+				   array ('SPK', 'Spark Plugs', 4));
+
+// pristupicemo nizu direktno i prikazati sadrzaj
+echo '|'.$products[0][0].'|'.$products[0][1].'|'.$products[0][2].'|<br/>';
+echo '|'.$products[1][0].'|'.$products[1][1].'|'.$products[1][2].'|<br/>';
+echo '|'.$products[2][0].'|'.$products[2][1].'|'.$products[2][2].'|<br/>';
+
+//nizu mozemo pristupiti i putem for petlje i dobicemo isti rezultat kao u prethodnom primeru
+for ($row = 0; $row < 3; $row ++) {
+	for ($column = 0; $column <3; $column ++) {
+		echo '|'.$products[$row][$column];
+	}
+	echo '|<br />';
+}
+
+// Umesto brojeva, kolonama mozemo dati imena. Ova naredba formira isti skup artikala, ali kolonama dodeljuje imena
+$products = array(array('Code' => 'TIR',
+						'Description' => 'Tires',
+						'Price' => '100'
+						),
+				  array('Code' => 'OIL',
+						'Description' => 'Oil',
+						'Price' => '10'
+						),
+				  array ('Code' => 'SPK',
+						'Description' => 'Spark Plugs',
+						'Price' => '4'
+						),
+	
+				);
+
+// Index nije numericki i lakse se pamti. Pristupicemo nizu putem for petlje
+for ( $row = 0; $row <3; $row ++) {
+	echo '|'.$products[$row]['Code'].'|'.$products[$row]['Description'].'|'.$products[$row]['Price'].'|<br />';
+}

@@ -83,7 +83,7 @@
 	}
 	
 	
-	// Izracunavanje totala sa porezom .... 1, 3 i 4 red mi nisu jasni			
+	// Izracunavanje totala sa porezom .... 2 je number format, a 1 je integer ko se sabira sa 0.20 i daje 120% ukupne sume		
 	echo 'Subtotal: $'.number_format($totalamount, 2).'<br/>';
 	$taxrate = 0.20; //Stopa poreza je 20%
 	$totalamount = $totalamount * (1 + $taxrate);

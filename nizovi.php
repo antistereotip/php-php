@@ -145,6 +145,17 @@ $categories = array (array (array ('CAR_TIR', 'Tires', 100),
 							)
 			);
 // isprintuj varijablu categories
- print_r ($categories);
+ print_r ($categories); echo '<br />';
+ 
+ // buduci da ovaj niz ima samo numericke indekse, za prikazivanje njegovog sadrzaja,  mogu se koristiti ugnjezdene for petlje
+ for ($layer=0; $layer<3; $layer++) {
+	 echo "Layer $layer<br />";
+	 for ($row=0; $row<3; $row++) {
+		 for ($column = 0; $column<3; $column++) {
+			echo '|'.$categories[$layer][$row][$column]; 
+		 }
+		 echo '<br />';
+	 }
+ }
 							
 							

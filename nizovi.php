@@ -187,10 +187,11 @@ $products = array( array('TIR', 'Tires', 100),
 				   array('OIL', 'Oil', 10),
 				   array ('SPK', 'Spark Plugs', 4));
 				 
+//funkcija compare uporedjuje vrednosti iz niza, vrednosti x[2] i y[2] su u ovom slucaju cene jer su treci element u nizu, 0, 1, 2
 function compare($x, $y) {
-	if ($x[1] == $y[1]) {
+	if ($x[2] == $y[2]) {
 		return 0;
-	} else if ($x[1]<$y[1]) {
+	} else if ($x[2]<$y[2]) {
 		return -1;
 	} else {
 		return 1;
@@ -199,6 +200,6 @@ function compare($x, $y) {
 
 usort ($products, 'compare');
 
-echo compare('TIR', 'OIL' );
-echo compare('OIL', 'SPK' );
-echo compare('SPK', 'TIR' );
+echo compare('Tires', 'Tires' );
+echo compare('Oil', 'Spark Plugs' );
+echo compare('Spark Plugs', 'Tires' );

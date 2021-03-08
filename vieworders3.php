@@ -17,7 +17,7 @@ $number_of_orders = count($orders);
 if ($number_of_orders == 0) {
 	echo "<p>No orders pending. Please try later.</p>";
 }
-echo "<table border=\1\">\n";
+echo "<table border='1'>\n";
 echo "<tr><th bgcolor=\"#CCCCFF\">Order Date</th>
 		  <th bgcolor=\"#CCCCFF\">Tires</th>
 		  <th bgcolor=\"#CCCCFF\">Oil</th>

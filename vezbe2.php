@@ -43,8 +43,18 @@ for($x=0;$x<$arrlength;$x++)
   echo $a[$x];
   echo "<br>";
   }
+  
+echo '<br />';
 
+function my_uksort($f,$c)
+{
+if ($f==$c) return 0;
+return ($f<$c)?-1:1;
+}
 
+$arr=array("a"=>4,"b"=>2,"c"=>8,"d"=>6);
+uksort($arr,"my_sort");
+var_dump (my_uksort('a', 'b'));
 
 echo '<br />';
 

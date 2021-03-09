@@ -75,4 +75,7 @@ echo '<br />';
 //which are equal and hence 0 is returned. So, for this echo compare('Oil', 'Spark Plugs' );, the compared 
 //characters are 'i' and 'p'. 'i' is less than p and hence -1 is returned. To decide which character is lower 
 //than the other, lookup ASCII codes. And so on for other function calls. Let me know, if you still have any doubt.
+$malaslova = "mala slova ce postati velika";
+$malaslova = strtoupper($malaslova);
+echo $malaslova;
 

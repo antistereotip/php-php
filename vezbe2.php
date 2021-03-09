@@ -8,9 +8,9 @@ print_r ($products); echo '<br />';
 				 
 //funkcija compare uporedjuje vrednosti iz niza, vrednosti x[2] i y[2] su u ovom slucaju cene jer su treci element u nizu, 0, 1, 2
 function compare($x, $y) {
-	if ($x[0] == $y[0]) {
+	if ($x[2] == $y[2]) {
 		return 0;
-	} else if ($x[0]<$y[0]) {
+	} else if ($x[2]<$y[2]) {
 		return -1;
 	} else {
 		return 1;
@@ -19,12 +19,17 @@ function compare($x, $y) {
 echo '<br />';
 var_dump ($products[0]);
 echo '<br />';
+var_dump ($products[1]);
+echo '<br />';
+var_dump ($products[2]);
+echo '<br />';
 //usort ($products, 'compare');
 
 echo compare('Tires', 'Tires' );
 echo compare('Oil', 'Spark Plugs' );
-echo compare('SPK', 'OIL' );
-echo compare('Tires', 'Tires');
+echo compare('OIL', 'SPK' );
+echo compare('SPK', 'OIL');
+echo compare('OIL', 'SPK');
 echo '<br />';
 
 

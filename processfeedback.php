@@ -1,14 +1,24 @@
 <?php
 $name = trim($_POST['name']);
 $email = trim($_POST['email']);
-$feedback = trim($_POST['feedback']);
+$feedback = addslashes(trim($_POST['feedback']));
 
 //staticke informacije
 $toadress = 'milutingavrilovic@gmail.com';
 
+if (strstr($feedback, 'shop')) 
+	$toadress="retail@examle.com";
+else if (strstr($feedback, 'delivery'))
+	$toadress = "fulfilment@example.com";
+else if (strstr($feedback, 'bill'))
+	$toadress = "account@example.com";
+	
+
+
 $subject ="Feedback from site";
 $mailcontent = "Customer name: ".$name."\n".
 				"Customer email: ".$email."\n".
+				"To mail email: ".$toadress."\n".
 				"Customer comments:  \n".$feedback."\n";
 
 $fromadress = "From: root@high.tech";

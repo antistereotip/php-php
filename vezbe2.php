@@ -1,4 +1,5 @@
 <?php
+
 //sortiranje visedimenzionih nizova
 // dvodimenzioni niz
 $products = array( array('TIR', 'Tires', 100),
@@ -79,3 +80,37 @@ $malaslova = "mala slova ce postati velika";
 $malaslova = strtoupper($malaslova);
 echo $malaslova;
 
+echo '<br/>';
+
+// Specify the range
+$a = range("A","Z");
+// Show the character one after another
+foreach($a as $char)
+    echo $char."<br>";
+
+echo '<br />';
+// Specify the alphabet range 
+$alpharange = range( 'A', 'Z' );
+// Show the alphabet one after another
+foreach ( $alpharange as $i ){
+    echo "$i\n";
+}
+echo '<br/>';
+$str = '<a href="https://antistereotip.net">Go to antistereotip.net</a>';
+echo htmlentities($str);
+
+echo '<br/>';
+$test = 'Your customer service is exelent';
+echo substr($test, 1); 
+echo '<br/>';
+echo substr($test, -9);
+echo '<br/>';
+echo substr($test, 5, -9);
+echo '<br/>';
+echo strlen("Hello");
+echo '<br/>';
+$email = "a@a.c";
+if (strlen($email)<6) {
+	echo "Ovo nije validna email adresa";
+	exit; // prisilno zavrsavanje php skripte
+}

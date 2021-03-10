@@ -109,8 +109,23 @@ echo substr($test, 5, -9);
 echo '<br/>';
 echo strlen("Hello");
 echo '<br/>';
-$email = "a@a.c";
+$email = "a@a.com";
 if (strlen($email)<6) {
 	echo "Ovo nije validna email adresa";
-	exit; // prisilno zavrsavanje php skripte
+	exit; // prisilno zavrsavanje php skripte ukoliko je uslov tacan, ukliko nije, skripta se nastavlja
 }
+echo '<br/>';
+$test = "Hello world";
+$result = strpos($test, "o");
+if ($result === false) {
+	echo "Not found";
+} else {
+	echo "Found at position ".$result;
+}
+echo '<br/>';
+$var = 'ABCDEFGH:/MNRPQR/';
+echo "Original: $var<hr />\n";
+
+/* Dva primera menjaju sve u varijabli $var sa 'bob'. */
+echo substr_replace($var, 'bob', 0) . "<br />\n";
+echo substr_replace($var, 'bob', 0, strlen($var)) . "<br />\n";

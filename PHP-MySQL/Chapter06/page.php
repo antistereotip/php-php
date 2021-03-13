@@ -9,7 +9,7 @@ class Page
   public $buttons = array("Home"   => "home.php", 
                         "Contact"  => "contact.php", 
                         "Services" => "services.php", 
-                        "Site Map" => "map.php"
+                        "Site Map" => "sitemap.php"
                     );
 
   // class Page's operations

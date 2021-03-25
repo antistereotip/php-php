@@ -46,7 +46,7 @@ $categories = $db->query($query);
 <header>
   <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">Antistereotip</a>
+      <a class="navbar-brand" href="#">Antistereotip U PRIPREMI</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -71,9 +71,9 @@ $categories = $db->query($query);
 			<?php }}  ?>
           
         </ul>
-        <form class="d-flex">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
+        <form class="d-flex" action="search.php" method="GET">
+          <input class="form-control me-2" type="search" aria-label="Search" placeholder="Pretraži ključne reči" name="keys" value="<?php echo isset($_GET['keys']) ? $_GET['keys'] : ''; ?>">
+          <button class="btn btn-outline-success" type="submit">Pretraži</button>
         </form>
       </div>
     </div>

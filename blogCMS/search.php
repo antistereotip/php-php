@@ -70,7 +70,7 @@ $result_count = mysqli_num_rows($query);
 	echo '</div>';
 }
 else
-	echo 'There were no results for your search. Try searching for something else.'; ?>
+	echo 'NEma rezultata po pretrazi. Molimo pretražite nešto drugo.'; ?>
     
 
     <hr class="featurette-divider">
